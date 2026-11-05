@@ -3,58 +3,137 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ALBERT · Política de privacidade</title>
+<title>ALBERT · Política de privacidade / Privacy Policy</title>
+<meta name="description" content="Política de privacidade do ALBERT: quais dados do Google são acessados, como são usados, guardados, protegidos e apagados.">
 <link rel="stylesheet" href="estilo.css">
+<style>table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem}th,td{border:1px solid var(--linha);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--card)}code{font-size:.85em;word-break:break-all}.idioma{display:flex;gap:14px;margin:8px 0 24px}</style>
 </head>
 <body>
 <main>
 <header><div class="orb" aria-hidden="true"></div><h1>Política de privacidade</h1></header>
-<p class="suave">Última atualização: 5 de novembro de 2026</p>
+<p class="suave">Aplicativo: <strong>ALBERT</strong> (ALBERT Desktop para Windows) · Responsável: Sebastian Cruz Aiello · Contato: <a href="mailto:sebaiello@gmail.com">sebaiello@gmail.com</a><br>Vigente desde: 5 de novembro de 2026 · Última atualização: 5 de novembro de 2026</p>
+<div class="idioma"><a href="#pt">Português</a><a href="#en">English</a></div>
 
-<p>Esta política explica como o aplicativo <strong>ALBERT</strong> (ALBERT Desktop para Windows) usa os dados de uma conta Google. O ALBERT é um projeto pessoal de Sebastian Cruz Aiello, usado por ele mesmo no próprio computador.</p>
+<section id="pt">
+<h2>1. Quem somos e a quem esta política se aplica</h2>
+<p>O ALBERT é um assistente pessoal de inteligência artificial para Windows, desenvolvido e operado por Sebastian Cruz Aiello ("nós"). Ele é um projeto pessoal e não comercial: não é vendido, não exibe anúncios e não é oferecido ao público. Esta política explica como o ALBERT coleta, usa, guarda, protege, compartilha e apaga dados, em especial os dados recebidos das APIs do Google quando o usuário conecta a própria conta Google.</p>
 
-<h2>1. Quais dados do Google o ALBERT acessa</h2>
-<p>Só depois que o usuário entra com a conta Google e autoriza, o ALBERT pede estes acessos:</p>
+<h2>2. Dados do Google que o ALBERT acessa e por quê</h2>
+<p>O ALBERT só acessa dados do Google depois que o usuário entra com a própria conta e autoriza, na tela de consentimento do Google, os acessos abaixo:</p>
+<table>
+<tr><th>Acesso (escopo)</th><th>Dados</th><th>Para que é usado</th></tr>
+<tr><td><code>openid</code>, <code>email</code></td><td>Endereço de e-mail e identificador da conta</td><td>Mostrar qual conta está conectada e manter o login.</td></tr>
+<tr><td>Google Agenda<br><code>https://www.googleapis.com/auth/calendar</code></td><td>Lista de agendas e eventos (título, data, hora, local, descrição)</td><td>Responder "o que tenho hoje/amanhã", procurar compromissos e criar compromissos que o usuário pedir.</td></tr>
+<tr><td>Gmail<br><code>https://www.googleapis.com/auth/gmail.modify</code></td><td>Remetente, assunto, data e conteúdo de e-mails; rascunhos</td><td>Listar e procurar e-mails, abrir e resumir uma mensagem a pedido do usuário e criar rascunhos de resposta.</td></tr>
+</table>
+<p>O ALBERT não acessa contatos, arquivos do Drive, fotos ou qualquer outro serviço do Google. Ações que afetam outras pessoas ou apagam dados (enviar e-mail, convidar pessoas para um evento, apagar mensagens ou eventos) só acontecem depois que o usuário aprova um cartão de confirmação no app, naquele momento.</p>
+
+<h2>3. Como os dados são usados</h2>
 <ul>
-<li><strong>Identificação básica</strong> (openid e e-mail): para saber qual conta está conectada.</li>
-<li><strong>Google Agenda</strong> (<code>https://www.googleapis.com/auth/calendar</code>): ler, procurar, criar e alterar compromissos.</li>
-<li><strong>Gmail</strong> (<code>https://www.googleapis.com/auth/gmail.modify</code>): ler e procurar e-mails, marcar como lidos, usar marcadores e criar rascunhos. Enviar um e-mail só acontece depois de aprovação explícita do usuário no app.</li>
+<li>Somente para executar o que o próprio usuário pede ao ALBERT por chat ou por voz.</li>
+<li>Não usamos dados do Google para publicidade, perfis de marketing, venda, avaliação de crédito ou qualquer finalidade diferente de oferecer as funções descritas acima.</li>
+<li>Não usamos dados do Google para treinar, melhorar ou desenvolver modelos de inteligência artificial ou de aprendizado de máquina.</li>
+<li>Nenhuma pessoa lê os dados do Google do usuário, exceto quando o próprio usuário pede ajuda e autoriza, quando necessário por segurança (por exemplo, investigar abuso) ou para cumprir a lei.</li>
 </ul>
 
-<h2>2. Como esses dados são usados</h2>
-<p>Os dados são usados apenas para atender ao que o próprio usuário pede ao ALBERT, por exemplo "o que tenho amanhã?", "resuma os e-mails de hoje" ou "marque reunião às 15h". O ALBERT não usa esses dados para publicidade, não cria perfis de marketing e não os vende nem os empresta a ninguém.</p>
-
-<h2>3. Onde os dados ficam</h2>
+<h2>4. Onde os dados ficam e como são protegidos</h2>
 <ul>
-<li>O login usa OAuth 2.0 com PKCE. A senha do Google nunca passa pelo ALBERT.</li>
-<li>Os tokens de acesso ficam guardados no Gerenciador de Credenciais do Windows, no próprio computador do usuário.</li>
-<li>E-mails e compromissos são buscados diretamente do Google para o computador do usuário quando ele pede, e não são copiados para nenhum banco de dados do ALBERT.</li>
-<li>Quando o usuário pede para o ALBERT resumir ou responder sobre um e-mail ou compromisso, o trecho necessário entra na conversa e é enviado ao servidor pessoal do ALBERT e ao serviço de IA da Anthropic (Claude API), apenas para gerar a resposta. A Anthropic não usa dados enviados pela API para treinar modelos, conforme as condições comerciais dela.</li>
-<li>O histórico das conversas fica salvo no computador do usuário, que pode apagá-lo pelo próprio app.</li>
+<li><strong>Login:</strong> OAuth 2.0 com PKCE, diretamente no navegador, com o Google. A senha do Google nunca passa pelo ALBERT.</li>
+<li><strong>Tokens de acesso:</strong> guardados no Gerenciador de Credenciais do Windows, no computador do usuário, protegidos pela conta do Windows. Nunca são enviados para servidores do ALBERT.</li>
+<li><strong>E-mails e eventos:</strong> são buscados do Google diretamente para o computador do usuário, por conexão criptografada (HTTPS/TLS), só quando ele pede. O ALBERT não mantém cópia própria da caixa de e-mail nem da agenda em nenhum servidor.</li>
+<li><strong>Respostas do assistente:</strong> quando o usuário pede para resumir ou comentar um e-mail ou compromisso, o trecho necessário entra na conversa e é enviado, por conexão criptografada, ao servidor pessoal do ALBERT (um servidor privado do responsável) e ao serviço de IA da Anthropic (Claude API), somente para gerar a resposta. Pelas condições comerciais da Anthropic, dados enviados pela API não são usados para treinar modelos.</li>
+<li><strong>Histórico das conversas:</strong> fica salvo apenas no computador do usuário. Antes de gravar, o app remove automaticamente senhas e chaves que apareçam no texto.</li>
 </ul>
 
-<h2>4. Compartilhamento</h2>
-<p>Os dados do Google não são compartilhados com terceiros, exceto o envio pontual ao serviço de IA descrito acima, que é necessário para o ALBERT funcionar. Nenhuma pessoa lê os seus e-mails ou compromissos, a não ser você mesmo.</p>
+<h2>5. Compartilhamento</h2>
+<p>Não vendemos, alugamos nem compartilhamos dados do Google com terceiros. A única transferência é o envio pontual descrito no item 4 ao provedor de IA (Anthropic), que atua como prestador de serviço apenas para gerar a resposta pedida pelo usuário. Também poderemos divulgar dados se a lei exigir.</p>
 
-<h2>5. Uso limitado (Google API Services User Data Policy)</h2>
-<p>O uso e a transferência, para qualquer outro aplicativo, de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado (Limited Use). Os dados do Google não são usados para treinar modelos de inteligência artificial genéricos.</p>
+<h2>6. Uso limitado (Limited Use)</h2>
+<p>O uso e a transferência, para qualquer outro aplicativo, de informações recebidas das APIs do Google seguem a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados do Usuário dos Serviços de API do Google</a>, incluindo os requisitos de Uso Limitado.</p>
 
-<h2>6. Como retirar o acesso e apagar dados</h2>
+<h2>7. Por quanto tempo guardamos e como apagar</h2>
 <ul>
-<li>No ALBERT, use a opção para sair da conta Google. Os tokens são apagados do Gerenciador de Credenciais do Windows.</li>
-<li>A qualquer momento, é possível retirar o acesso em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
-<li>Para pedir a exclusão de qualquer dado, escreva para o contato abaixo.</li>
+<li><strong>E-mails e eventos</strong> são mantidos só na memória enquanto a resposta é preparada. Trechos que entram na conversa ficam no histórico do computador do usuário até ele apagá-lo em <em>Configurações › Conversas guardadas</em>.</li>
+<li><strong>Tokens</strong> ficam guardados até o usuário sair da conta. No ALBERT, basta escrever "sair do Google": o app apaga os tokens do Gerenciador de Credenciais do Windows.</li>
+<li>O usuário pode retirar o acesso a qualquer momento em <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+<li>Para pedir a exclusão de qualquer dado relacionado ao ALBERT, escreva para <a href="mailto:sebaiello@gmail.com">sebaiello@gmail.com</a>. Respondemos em até 30 dias.</li>
 </ul>
 
-<h2>7. Mudanças nesta política</h2>
-<p>Se esta política mudar, a data no topo da página será atualizada.</p>
+<h2>8. Crianças</h2>
+<p>O ALBERT não é destinado a menores de 18 anos.</p>
 
-<h2>8. Contato</h2>
+<h2>9. Seus direitos (LGPD)</h2>
+<p>Você pode pedir confirmação, acesso, correção ou exclusão dos seus dados, e retirar o consentimento a qualquer momento, pelo contato abaixo.</p>
+
+<h2>10. Mudanças</h2>
+<p>Se esta política mudar, a data de atualização no topo será alterada. Mudanças importantes no uso de dados do Google pedirão um novo consentimento.</p>
+
+<h2>11. Contato</h2>
 <p>Sebastian Cruz Aiello · <a href="mailto:sebaiello@gmail.com">sebaiello@gmail.com</a></p>
+</section>
+
+<hr style="border:0;border-top:1px solid var(--linha);margin:48px 0">
+
+<section id="en" lang="en">
+<h1 style="font-size:1.6rem">Privacy Policy (English)</h1>
+<p class="suave">App: <strong>ALBERT</strong> (ALBERT Desktop for Windows) · Developer: Sebastian Cruz Aiello · Contact: <a href="mailto:sebaiello@gmail.com">sebaiello@gmail.com</a> · Effective and last updated: November 5, 2026</p>
+
+<h2>1. Who we are</h2>
+<p>ALBERT is a personal AI assistant for Windows built and operated by Sebastian Cruz Aiello ("we"). It is a personal, non-commercial project: it is not sold, shows no ads and is not offered to the public. This policy explains how ALBERT collects, uses, stores, protects, shares and deletes data, especially data received from Google APIs when the user connects their own Google Account.</p>
+
+<h2>2. Google data accessed and why</h2>
+<table>
+<tr><th>Scope</th><th>Data</th><th>Purpose</th></tr>
+<tr><td><code>openid</code>, <code>email</code></td><td>Email address and account identifier</td><td>Show which account is connected and keep the user signed in.</td></tr>
+<tr><td>Google Calendar<br><code>https://www.googleapis.com/auth/calendar</code></td><td>Calendar list and events (title, date, time, location, description)</td><td>Answer "what do I have today/tomorrow", search events and create events the user asks for.</td></tr>
+<tr><td>Gmail<br><code>https://www.googleapis.com/auth/gmail.modify</code></td><td>Sender, subject, date and body of emails; drafts</td><td>List and search emails, open and summarize a message on the user's request, and create reply drafts.</td></tr>
+</table>
+<p>ALBERT does not access contacts, Drive files, photos or any other Google service. Actions that affect other people or delete data (sending email, inviting people, deleting messages or events) only happen after the user approves a confirmation card in the app at that moment.</p>
+
+<h2>3. How data is used</h2>
+<ul>
+<li>Only to perform what the user asks ALBERT to do, by chat or voice.</li>
+<li>Google data is never used for advertising, marketing profiles, sale, credit evaluation or any purpose other than the features above.</li>
+<li>Google data is never used to train, improve or develop generalized AI or machine-learning models.</li>
+<li>No human reads the user's Google data, except with the user's explicit consent for support, for security purposes (such as investigating abuse), or to comply with applicable law.</li>
+</ul>
+
+<h2>4. Storage and protection</h2>
+<ul>
+<li><strong>Sign-in:</strong> OAuth 2.0 with PKCE in the browser, directly with Google. ALBERT never sees the Google password.</li>
+<li><strong>Access tokens:</strong> stored in Windows Credential Manager on the user's computer, protected by the Windows account. They are never sent to ALBERT servers.</li>
+<li><strong>Emails and events:</strong> fetched from Google directly to the user's computer over encrypted connections (HTTPS/TLS), only when requested. ALBERT keeps no copy of the mailbox or calendar on any server.</li>
+<li><strong>Assistant answers:</strong> when the user asks ALBERT to summarize or discuss an email or event, the needed excerpt is sent over an encrypted connection to ALBERT's private server and to Anthropic's AI service (Claude API) solely to generate the answer. Under Anthropic's commercial terms, API data is not used for model training.</li>
+<li><strong>Conversation history:</strong> stored only on the user's computer; passwords and keys are automatically redacted before saving.</li>
+</ul>
+
+<h2>5. Sharing</h2>
+<p>We do not sell, rent or share Google user data with third parties. The only transfer is the one described in section 4 to the AI provider (Anthropic), acting as a service provider solely to generate the answer the user requested. We may disclose data if required by law.</p>
+
+<h2>6. Limited Use</h2>
+<p>ALBERT's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+<h2>7. Retention and deletion</h2>
+<ul>
+<li><strong>Emails and events</strong> are kept in memory only while an answer is prepared. Excerpts that enter a conversation stay in the local history until the user deletes it in <em>Settings › Saved conversations</em>.</li>
+<li><strong>Tokens</strong> are kept until the user signs out. Typing "sair do Google" (sign out of Google) in ALBERT deletes them from Windows Credential Manager.</li>
+<li>Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+<li>To request deletion of any ALBERT-related data, email <a href="mailto:sebaiello@gmail.com">sebaiello@gmail.com</a>. We reply within 30 days.</li>
+</ul>
+
+<h2>8. Children</h2>
+<p>ALBERT is not intended for anyone under 18.</p>
+
+<h2>9. Changes</h2>
+<p>If this policy changes, the date above will be updated. Material changes to the use of Google data will require new consent.</p>
+
+<h2>10. Contact</h2>
+<p>Sebastian Cruz Aiello · <a href="mailto:sebaiello@gmail.com">sebaiello@gmail.com</a></p>
+</section>
 
 <nav>
-<a href="index.html">Início</a>
-<a href="termos.html">Termos de uso</a>
+<a href="index.html">Início / Home</a>
+<a href="termos.html">Termos de uso / Terms</a>
 </nav>
 </main>
 </body>
